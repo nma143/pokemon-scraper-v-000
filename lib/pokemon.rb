@@ -20,8 +20,8 @@ class Pokemon
     #puts "id: #{output[0][0]}, name: #{output[0][1]}, type: #{output[0][2]}, db: #{db}"
   end
 
-  def alter_hp(newpower)
-    @db.execute("UPDATE pokemon SET hp = ? WHERE id = ? VALUES(?, ?)", newpower, @id)
+  def alter_hp(newpower, db)
+    db.execute("UPDATE pokemon SET hp = ? WHERE id = ? VALUES(?, ?)", newpower, @id)
 
   end
 
