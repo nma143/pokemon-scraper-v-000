@@ -8,6 +8,8 @@ class Pokemon
 
   def save
 
+  database_connection.execute("INSERT INTO pokemon (id, name, type) VALUES (?, ?, ?)", @id, @name, @type)
+
   end
 
 
