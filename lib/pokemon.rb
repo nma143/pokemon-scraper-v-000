@@ -6,7 +6,7 @@ class Pokemon
 
   end
 
-  def save
+  def self.save
 
   database_connection.execute("INSERT INTO pokemon (id, name, type) VALUES (?, ?, ?)", @id, @name, @type)
 
